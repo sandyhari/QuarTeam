@@ -4,18 +4,18 @@
 <title>Store for software</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Goblin+One">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Chelsea+Market">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 <link rel="stylesheet" href="styles.css">
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Chelsea Market", sans-serif}
 p{
   font-family: "Roboto Slab", sans-serif;
 }
-a{
-  text-shadow: black;
+#logo{
+  font-family: "Goblin One", sans-serif;
 }
 body, html {
   height: 100%;
@@ -44,27 +44,20 @@ body, html {
 }
 </style>
 <body>
-
-<!-- Navbar (sit on top) -->
 <div class="w3-top">
-  <div class="w3-bar w3-white w3-card" id="myNavbar">
-    <a href="#home" class="w3-bar-item w3-button w3-wide">LOGO</a>
-    <!-- Right-sided navbar links -->
+  <div class="w3-bar w3-white w3-card-4" id="myNavbar">
+    <a href="#home" class="w3-bar-item w3-button w3-wide" id="logo">GET INFO BUDDY!</a>
     <div class="w3-right w3-hide-small">
       <a href="#searchpage" class="w3-bar-item w3-button"> SEARCH</a>
+      <a href="#addsoftware" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> ADD SOFTWARE</a>
       <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
       <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> WORK</a>
-      <a href="#addsoftware" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> ADD SOFTWARE</a>
     </div>
-    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
-
     <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
       <i class="fa fa-bars"></i>
     </a>
   </div>
 </div>
-
-<!-- Sidebar on small screens when clicking the menu icon -->
 <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close &times;</a>
   <a href="#searchpage" onclick="w3_close()" class="w3-bar-item w3-button">SEARCH</a>
@@ -73,7 +66,6 @@ body, html {
   <a href="#addsoftware" onclick="w3_close()" class="w3-bar-item w3-button">Add Software</a>
 </nav>
 
-<!-- Header with full-height image -->
 <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
   <div class="w3-display-left w3-text-black" style="padding:48px">
     <span class="w3-jumbo w3-hide-small">Get only What You Search for !</span><br>
@@ -90,16 +82,22 @@ body, html {
     <i class="fa fa-linkedin w3-hover-opacity"></i>
   </div>
 </header>
-
 <!-- Search Section -->
-<div class="w3-container" style="padding:64px 16px 64px" id="searchpage">
-  <h3 class="w3-center">Right software for your awesome device.</h3>
-  <div class="w3-row w3-section">
-    <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-search" aria-hidden="true"></i></div>
-      <div class="w3-rest">
-        <input class="w3-input w3-border" name="searchSoftware" type="text" id="txtsearchSoftware" placeholder="Enter software name here and select from the drop-down">
-      </div>
+<div class="w3-container w3-light-grey" style="padding:64px 16px" id="searchpage">
+  <div class="w3-panel w3-leftbar w3-blue w3-round-xlarge">
+    <h3 class="w3-center">Right software for your awesome device.</h3>
   </div>
+  <div style="margin-top:48px">
+    <form>
+      <p>
+        <input class="w3-input w3-border" name="searchSoftware" type="text" id="txtsearchSoftware" placeholder="Enter software name here and select from the drop-down"required name="Name">
+        <button class="w3-button w3-black" type="submit"><i class="fa fa-search"></i> SEARCH</button>
+      </p>
+    </form>
+  </div>
+
+
+<div class="w3-container" style="padding:64px 16px 64px" id="searchpage">
   <div class="w3-cell-row w3-card-2">
     <div class="w3-cell w3-cell-middle w3-hide-small w3-green w3-center w3-xxlarge" style="padding:16px;width:150px" id="dispIMG">
       No <br> IMG
@@ -114,25 +112,33 @@ body, html {
       <p>Any OS restrictions : Nope free to use in all</p>
     <!-- Display searched content container section -->
     </div>
-    
-
   </div>
+</div>
 </div>
 
 <!-- Add new software Section -->
-<div class="w3-container w3-light-grey" style="padding:128px 16px" id="addsoftware">
-  <h3 class="w3-center">Add Software</h3>
-  <p class="w3-center w3-large">Lets share us , what u know and what we missed !</p>
+<div class="w3-container w3-light-grey" style="padding:64px 16px" id="addsoftware">
+  <div class="w3-panel w3-leftbar w3-blue w3-round-xlarge">
+    <h3 class="w3-center">Add Software</h3>
+    <p class="w3-center w3-large">Lets share us , what u know and what we missed !</p>
+  </div>
   <div style="margin-top:48px">
-    <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Chicago, US</p>
+<!--     <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Chicago, US</p>
     <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +00 151515</p>
-    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: mail@mail.com</p>
+    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: mail@mail.com</p> -->
     <br>
     <form>
       <p><input class="w3-input w3-border" type="text" placeholder="Your name" required name="Name"></p>
       <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Please Enter Software Name to be included in our search" required name="Software Name"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Tell us in short, whats this software for" required name="description"></p>
+      <p><select  class="w3-select" name="tooldrop" id="tooldrop">
+        <option value="" disabled selected>What type of tool it is</option>
+        <option value="code">Developer Tool</option>
+        <option value="video">Video Tool</option>
+        <option value="audio">Audio Tool</option>
+        <option value="other">Not Sure, No Probs we will Map it</option>
+      </select></p>
       <p>
         <button class="w3-button w3-black" type="submit">
           <i class="fa fa-paper-plane"></i> SEND MESSAGE
@@ -141,6 +147,7 @@ body, html {
     </form>
   </div>
 </div>
+
 <footer class="w3-center w3-black w3-padding-64">
   <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
   <div class="w3-xlarge w3-section">
@@ -151,16 +158,11 @@ body, html {
     <i class="fa fa-twitter w3-hover-opacity"></i>
     <i class="fa fa-linkedin w3-hover-opacity"></i>
   </div>
-  <p>Innovation is an <i>'END-LESS'</i> process here.</p>
+  <p>Innovation is an <i>'END-LESS'</i>  here.</p>
 </footer>
  
 <script>
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
+
 var mySidebar = document.getElementById("mySidebar");
 
 function w3_open() {

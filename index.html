@@ -91,29 +91,27 @@ body, html {
     <form>
       <p>
         <input class="w3-input w3-border" name="searchSoftware" type="text" id="txtsearchSoftware" placeholder="Enter software name here and select from the drop-down"required name="Name">
-        <button class="w3-button w3-black" type="submit"><i class="fa fa-search"></i> SEARCH</button>
+        <button class="w3-button w3-black w3-round-medium" type="submit"><i class="fa fa-search"></i> SEARCH</button>
       </p>
     </form>
   </div>
-
-
-<div class="w3-container" style="padding:64px 16px 64px" id="searchpage">
-  <div class="w3-cell-row w3-card-2">
-    <div class="w3-cell w3-cell-middle w3-hide-small w3-green w3-center w3-xxlarge" style="padding:16px;width:150px" id="dispIMG">
-      No <br> IMG
-    <!-- Display searched image section -->
-    </div>
-    <div class="w3-cell w3-container w3-light-gray w3-border-left w3-cell-top" style="padding:0px 16px 8px 16px;" id="displaypage">
-      <p><a href="https://nodejs.org/en/download/" target="_blank">Official Download Link</a></p>
-      <p>Description : This software is a JavaScript runtime built on Chrome's V8 JavaScript engine. Helps to use the Javascript on local machine cool right!</p>
-      <p>Guidance : Click on the LTS and the website automatically decides your OS.</p>
-      <p>Size of file : ~19MB</p>
-      <p>Category : Coding</p>
-      <p>Any OS restrictions : Nope free to use in all</p>
-    <!-- Display searched content container section -->
+  <div class="w3-container" style="padding:64px 16px 64px" id="searchpage">
+    <div class="w3-cell-row w3-card-2 w3-round-medium">
+      <div class="w3-cell w3-cell-middle w3-hide-small w3-green w3-center w3-xxlarge w3-hover-opacity:hover" style="padding:16px;width:150px" id="dispIMG">
+        No <br> IMG
+            <!-- Display searched image section -->
+      </div>
+      <div class="w3-cell w3-container w3-light-gray w3-border-left w3-cell-top" style="padding:0px 16px 8px 16px;" id="displaypage">
+        <p><a href="https://nodejs.org/en/download/" target="_blank">Official Download Link</a></p>
+        <p>Description : This software is a JavaScript runtime built on Chrome's V8 JavaScript engine. Helps to use the Javascript on local machine cool right!</p>
+        <p>Guidance : Click on the LTS and the website automatically decides your OS.</p>
+        <p>Size of file : ~19MB</p>
+        <p>Category : Coding</p>
+        <p>Any OS restrictions : Nope free to use in all</p>
+            <!-- Display searched content container section -->
+      </div>
     </div>
   </div>
-</div>
 </div>
 
 <!-- Add new software Section -->
@@ -123,18 +121,14 @@ body, html {
     <p class="w3-center w3-large">Lets share us , what u know and what we missed !</p>
   </div>
   <div style="margin-top:48px">
-<!--     <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Chicago, US</p>
-    <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +00 151515</p>
-    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: mail@mail.com</p> -->
-    <br>
     <form>
-      <p><input class="w3-input w3-border" type="text" placeholder="Your name" required name="Name"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Your Name" required name="Name"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Your Email ID" required name="Email"></p>
       <p><input class="w3-input w3-border" type="text" placeholder="Please Enter Software Name to be included in our search" required name="Software Name"></p>
       <p><input class="w3-input w3-border" type="text" placeholder="Tell us in short, whats this software for" required name="description"></p>
       <p><select  class="w3-select" name="tooldrop" id="tooldrop">
         <option value="" disabled selected>What type of tool it is</option>
-        <option value="code">Developer Tool</option>
+        <option value="code"> Developer Tool</option>
         <option value="video">Video Tool</option>
         <option value="audio">Audio Tool</option>
         <option value="other">Not Sure, No Probs we will Map it</option>
@@ -160,11 +154,10 @@ body, html {
   </div>
   <p>Innovation is an <i>'END-LESS'</i>  here.</p>
 </footer>
+<script src="data.js"></script>
  
 <script>
-
 var mySidebar = document.getElementById("mySidebar");
-
 function w3_open() {
   if (mySidebar.style.display === 'block') {
     mySidebar.style.display = 'none';

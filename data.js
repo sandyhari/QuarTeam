@@ -1,43 +1,44 @@
-const dataJson = [{
-    "quiz": {
-        "sport": {
-            "q1": {
-                "question": "Which one is correct team name in NBA?",
-                "options": [
-                    "New York Bulls",
-                    "Los Angeles Kings",
-                    "Golden State Warriros",
-                    "Huston Rocket"
-                ],
-                "answer": "Huston Rocket"
-            }
-        },
-        "maths": {
-            "q1": {
-                "question": "5 + 7 = ?",
-                "options": [
-                    "10",
-                    "11",
-                    "12",
-                    "13"
-                ],
-                "answer": "12"
-            },
-            "q2": {
-                "question": "12 - 8 = ?",
-                "options": [
-                    "1",
-                    "2",
-                    "3",
-                    "4"
-                ],
-                "answer": "4"
-            }
-        }
-    }
-}
 
+let dispDetails = [];
+const dataJson = [	
+{	
+"Name" : "Node JS",
+"DownloadLink" : "",
+"Description": "This software is a JavaScript runtime built on Chrome's V8 JavaScript engine. Helps to use the Javascript on local machine cool right!",
+"Guidance": "Click on the LTS and the website automatically decides your OS.",
+"Size of file": "~19MB",
+"Category": "Coding",
+"AnyOSrestrictions": "Nope free to use in all",
+"License" : "They dont charge, no penny required. Happy Coding!"
+},
+{	
+"Name" : "Eclipse for JAVA",
+"DownloadLink" : "https://www.eclipse.org/downloads/",
+"Description": "Developed using Java, the Eclipse platform can be used to develop rich client applications, integrated development environments and other tools. Eclipse can be used as an IDE for any programming language for which a plug-in is available.",
+"Guidance": "Choose the eclipse technology that is right for you",
+"Size of file": "~182MB",
+"Category": "Coding",
+"AnyOSrestrictions": "Nope free to use in all",
+"License" : "They dont charge, no penny required. Happy Coding!"
+},
+{
+  "Name" : "VISUAL Studio 2019",
+  "DownloadLink" : "https://visualstudio.microsoft.com/downloads/",
+"Description": "Microsoft Visual Studio is an integrated development environment from Microsoft. It is used to develop computer programs, as well as websites, web apps, web services and mobile apps.",
+"Guidance": "Choose the version out of Community, Professional or Enterprise whatever is suitable for you",
+"Size of file": "~2.3GB",
+"Category": "Coding",
+"AnyOSrestrictions": "Nope free to use in all",
+"License" : "Its Microsoft dude, its chargeable based on the version"
+}
 ];
+
+function onLoad(){
+  dataJson.forEach(element => {
+    dispDetails.push(element.Name);
+  });
+
+}
 function autocomplete(inp, arr) {
     var currentFocus;
     inp.addEventListener("input", function(e) {
@@ -103,7 +104,11 @@ function autocomplete(inp, arr) {
         closeAllLists(e.target);
     });
   }
-  let countries = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla","Antigua & Barbuda","Argentina","Armenia","Aruba","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bermuda","Bhutan","Bolivia","Bosnia & Herzegovina","Botswana","Brazil","British Virgin Islands","Brunei","Bulgaria","Burkina Faso","Burundi","Cambodia","Cameroon","Canada","Cape Verde","Cayman Islands","Central Arfrican Republic","Chad","Chile","China","Colombia","Congo","Cook Islands","Costa Rica","Cote D Ivoire","Croatia","Cuba","Curacao","Cyprus","Czech Republic","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia","Ethiopia","Falkland Islands","Faroe Islands","Fiji","Finland","France","French Polynesia","French West Indies","Gabon","Gambia","Georgia","Germany","Ghana","Gibraltar","Greece","Greenland","Grenada","Guam","Guatemala","Guernsey","Guinea","Guinea Bissau","Guyana","Haiti","Honduras","Hong Kong","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Isle of Man","Israel","Italy","Jamaica","Japan","Jersey","Jordan","Kazakhstan","Kenya","Kiribati","Kosovo","Kuwait","Kyrgyzstan","Laos","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Macau","Macedonia","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands","Mauritania","Mauritius","Mexico","Micronesia","Moldova","Monaco","Mongolia","Montenegro","Montserrat","Morocco","Mozambique","Myanmar","Namibia","Nauro","Nepal","Netherlands","Netherlands Antilles","New Caledonia","New Zealand","Nicaragua","Niger","Nigeria","North Korea","Norway","Oman","Pakistan","Palau","Palestine","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal","Puerto Rico","Qatar","Reunion","Romania","Russia","Rwanda","Saint Pierre & Miquelon","Samoa","San Marino","Sao Tome and Principe","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Slovakia","Slovenia","Solomon Islands","Somalia","South Africa","South Korea","South Sudan","Spain","Sri Lanka","St Kitts & Nevis","St Lucia","St Vincent","Sudan","Suriname","Swaziland","Sweden","Switzerland","Syria","Taiwan","Tajikistan","Tanzania","Thailand","Timor L'Este","Togo","Tonga","Trinidad & Tobago","Tunisia","Turkey","Turkmenistan","Turks & Caicos","Tuvalu","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States of America","Uruguay","Uzbekistan","Vanuatu","Vatican City","Venezuela","Vietnam","Virgin Islands (US)","Yemen","Zambia","Zimbabwe"];
-  autocomplete(document.getElementById("txtsearchSoftware"), countries);
+  
+  autocomplete(document.getElementById("txtsearchSoftware"), dispDetails);
 
 const txtSearchbox = document.getElementById('txtsearchSoftware').value;
+
+function searchfn(){
+    txtSearchbox;
+}
